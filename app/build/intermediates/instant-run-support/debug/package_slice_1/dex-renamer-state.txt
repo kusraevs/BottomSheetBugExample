@@ -1,0 +1,4 @@
+#Sun Feb 04 17:10:49 MSK 2018
+base.0=/Users/macbook/Documents/AndroidProjects/Libs/BottomSheetExample/app/build/intermediates/transforms/dexMerger/debug/1
+path.0=classes.dex
+renamed.0=classes.dex
