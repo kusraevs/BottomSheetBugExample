@@ -1,7 +1,9 @@
 package com.example.bottomsheetexample;
 
+import android.animation.LayoutTransition;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.NestedScrollView;
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.coordinateLayout)
     LinearLayout coordinateLayout;
 
+    @BindView(R.id.root_layout)
+    CoordinatorLayout rootLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheetViewgroup);
 
 
+        LayoutTransition layoutTransition = new LayoutTransition();
+        layoutTransition.setAnimateParentHierarchy(false);
+        layoutTransition.enableTransitionType(LayoutTransition.CHANGING);
+        rootLayout.setLayoutTransition(layoutTransition);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

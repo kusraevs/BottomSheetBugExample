@@ -1,6 +1,7 @@
 // Generated code from Butter Knife. Do not modify!
 package com.example.bottomsheetexample;
 
+import android.support.design.widget.CoordinatorLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import butterknife.Unbinder;
@@ -20,6 +21,7 @@ public class MainActivity_ViewBinding<T extends MainActivity> implements Unbinde
     target.timeLayout = finder.findRequiredViewAsType(source, R.id.timeLayout, "field 'timeLayout'", LinearLayout.class);
     target.subtitleLayout = finder.findRequiredViewAsType(source, R.id.subtitleLayout, "field 'subtitleLayout'", LinearLayout.class);
     target.coordinateLayout = finder.findRequiredViewAsType(source, R.id.coordinateLayout, "field 'coordinateLayout'", LinearLayout.class);
+    target.rootLayout = finder.findRequiredViewAsType(source, R.id.root_layout, "field 'rootLayout'", CoordinatorLayout.class);
   }
 
   @Override
@@ -32,6 +34,7 @@ public class MainActivity_ViewBinding<T extends MainActivity> implements Unbinde
     target.timeLayout = null;
     target.subtitleLayout = null;
     target.coordinateLayout = null;
+    target.rootLayout = null;
 
     this.target = null;
   }
